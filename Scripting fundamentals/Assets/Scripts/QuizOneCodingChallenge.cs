@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QuizOneCodingChallenge : MonoBehaviour
-   
 {
-    private int _PlayerHealthAmount = 100;
-    
+    private int Health = 100;
     public string PlayerName = "Andres";
-
     public int Score = 0;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(AddTwoNumbers(4, 9));
+        IncreaseScore();
+        PrintPlayerName();
+        DeacreaseHealth();
     }
 
     // Update is called once per frame
@@ -22,23 +21,33 @@ public class QuizOneCodingChallenge : MonoBehaviour
 
     }
 
-    private int AddTwoNumbers(int num1, int num2)
-    {
-        return num1 + num2; 
-    }
 
-    public void UpdatePlayerHealth(int amount)
+
+    public void UpdatePlayerHealth()
 
     {
-        _PlayerHealthAmount -= amount;
+        Health -= 20;
     }
 
 
     private void IncreaseScore()
 
     {
-        Score = Score + 10;
+        Score += 10;
+        //Score = Score + 10;
     }
 
+    private void PrintPlayerName()
 
+    {
+        Debug.Log(PlayerName);
+    }
+
+    private void DeacreaseHealth()
+
+    {
+        Health -= 20;
+    }
 }
+
+
