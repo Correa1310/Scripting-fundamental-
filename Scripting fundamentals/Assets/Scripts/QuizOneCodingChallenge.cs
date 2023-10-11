@@ -41,7 +41,7 @@ public class QuizOneCodingChallenge : MonoBehaviour
 
     {
         Debug.Log(PlayerName);
-    }
+    } 
 
     private void DeacreaseHealth()
 
